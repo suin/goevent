@@ -79,6 +79,14 @@ func TestDescribe(t *testing.T) {
             })
 
         })
+
+        Context("Purge subscribers", func() {
+            bus.Purge()
+
+            It("should be no subscribers", func() {
+                Expect(len(bus.Subscribers)).To(Equal, 0)
+            })
+        })
     })
 }
 

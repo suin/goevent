@@ -34,3 +34,8 @@ func (this *EventBus) Publish(event interface{}) {
 		}
 	}
 }
+
+// mainly for testing
+func (this *EventBus) Purge() {
+	this.Subscribers = []*Subscriber{}
+}
