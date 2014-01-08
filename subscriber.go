@@ -1,9 +1,9 @@
 package goevent
 
 import (
+	"errors"
 	"fmt"
 	"reflect"
-	"errors"
 )
 
 type Subscriber struct {
